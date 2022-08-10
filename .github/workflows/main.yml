@@ -6,10 +6,10 @@ name: Cypress Tests
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-# This workflow contains a single job called "cypress-run"
+  # This workflow contains a single job called "cypress-run"
   cypress-run:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -19,7 +19,6 @@ jobs:
       - name: Cypress.io
         uses: cypress-io/github-action@v2.9.7
         with:
-          build: npm run build 
           start: npm start
           record: true
         env:
