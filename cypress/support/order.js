@@ -35,7 +35,7 @@ Cypress.Commands.add('clickOnOrderButtonFromCard', () => {
     })
 })
 
-Cypress.Commands.add('checkOrderLineElement', () => {
+Cypress.Commands.add('checkOrderLineElements', () => {
     const tomorrow = DateTime.local().plus({ days: 1 })
     const tomorrowDateFormat = tomorrow.setLocale('en-gb').toLocaleString()
     cy.xpath(`${orderLineXpath}`).each(($div) => {
