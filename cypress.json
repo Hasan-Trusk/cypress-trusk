@@ -9,5 +9,6 @@
   },
   "viewportWidth": 1366,
   "viewportHeight": 768,
-  "projectId": "7i2gpq"
+  "projectId": "7i2gpq",
+  "defaultCommandTimeout": 30000
 }
