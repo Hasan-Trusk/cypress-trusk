@@ -57,7 +57,7 @@ Cypress.Commands.add('clickOnFirstOrderAmongList', () => {
 })
 
 // Cypress.Commands.add('checkOrderDetailsPage', () => {
-//     let splitedUrl
+//     let splitedUrl df
 //     cy.url().then((url) => {
 //         splitedUrl = url.split(/[/=?]/)
 //         expect(url).to.equal(`${Cypress.env('truskBusinessBaseUrl')}/fr/orders/detail?orderId=${splitedUrl[7]}`)
