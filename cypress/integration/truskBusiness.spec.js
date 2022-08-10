@@ -7,11 +7,10 @@ describe('Trusk business automation', () => {
     let deliveryData
     let navBarData
     before(() => {
-        cy.visit(`${Cypress.env('truskBusinessBaseUrl')}/login`)
-    })
-    beforeEach(() => {
-    // Permet de charger des fausses données créer via un fichier json passé en paramètre.
-    // Je créer une variable loginData, je lui affecte mon objet json data
+        // Permet de charger des fausses données créer via un fichier json passé en paramètre.
+        // Je créer une variable loginData, je lui affecte mon objet json data
+
+        cy.openTruskBusinessLoginPage()
         cy.fixture('loginFixtures').then((data) => {
             loginData = data
             return loginData
@@ -25,6 +24,7 @@ describe('Trusk business automation', () => {
             return navBarData
         })
     })
+
     describe('Login feature', () => {
         it('User try to click on submit, without filling login form', () => {
             cy.emptyLogin()
@@ -184,20 +184,16 @@ describe('Trusk business automation', () => {
             })
             it('Check generals conditions for duplicate delivery', () => {
                 cy.checkGeneralConditions()
-                cy.wait(1000)
             })
             it('Submit duplicate delivery ', () => {
                 cy.submitDeliveryCreation()
-                cy.wait(1000)
             })
         })
         describe('Return delivery page', () => {
             it('Click on return order button and check specifics behavior', () => {
                 cy.returnDelivery()
-                cy.wait(1000)
             })
             it('Submit return delivery ', () => {
-                cy.wait(1000)
                 cy.submitDeliveryCreation()
             })
             it('Click on new delivery button from card ', () => {
@@ -221,7 +217,7 @@ describe('Trusk business automation', () => {
                 cy.checkIfColumnTitleIsDisplayed()
             })
             it('Check order line element', () => {
-                cy.checkOrderLineElement()
+                cy.checkOrderLineElements()
             })
             it('click on first order among list', () => {
                 cy.clickOnFirstOrderAmongList()

@@ -10,5 +10,11 @@
   "viewportWidth": 1366,
   "viewportHeight": 768,
   "projectId": "7i2gpq",
-  "defaultCommandTimeout": 30000
+  "defaultCommandTimeout": 40000,
+  "retries": {
+    "runMode": 3,
+    "openMode": 3
+  }
+
+  
 }
