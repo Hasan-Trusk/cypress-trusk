@@ -1,0 +1,37 @@
+{
+  "name": "cypress-trusk",
+  "version": "1.0.0",
+  "description": "trusk business automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cypress",
+    "javascript",
+    "chai",
+    "axios",
+    "luxon"
+  ],
+  "author": "Hasan AKAR",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^7.3.0",
+    "chai": "^4.3.6",
+    "cypress": "^9.6.1",
+    "cypress-wait-until": "^1.7.2",
+    "cypress-xpath": "^1.6.2",
+    "eslint": "^8.16.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-chai-friendly": "^0.7.2",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "luxon": "^2.4.0"
+  },
+  "dependencies": {
+    "cypress-cdp": "^1.1.0",
+    "lodash": "^4.17.21"
+  }
+}

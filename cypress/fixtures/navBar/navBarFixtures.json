@@ -1,0 +1,8 @@
+{
+  "navBarElement": {
+    "newDelivery": "'Nouvelle livraison'",
+    "order": "'Mes commandes'",
+    "bill": "'Factures'"
+    
+  }
+}

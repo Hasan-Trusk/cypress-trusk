@@ -1,0 +1,12 @@
+{
+    "baseUrl": "https://staging-06-pro.trusk.com/fr/login",
+    "env": {
+        "truskApiBaseUrl": "https://staging-06-api.trusk.com",
+        "truskPricerApiBaseUrl": "https://staging-06-pricer.trusk.com",
+        "truskBusinessBaseUrl": "https://staging-06-pro.trusk.com",
+        "b2bEmail": "hasanb2b@trusk.com",
+        "b2bPassword": "password"   
+    },
+    "viewportWidth": 1366,
+    "viewportHeight": 768
+}
