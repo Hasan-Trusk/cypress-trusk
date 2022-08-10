@@ -1,9 +1,10 @@
 # Dependency directories
 node_modules/
-jspm_packages/
 
 # Additional files to ignore
 .vscode
 .vscode/
 .vscode/**/*
+cypress/screenshots/
+cypress/videos/
 
