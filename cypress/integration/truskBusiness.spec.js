@@ -216,6 +216,9 @@ describe('Trusk business automation', () => {
             it('Check if column titles from order tab are displayed', () => {
                 cy.checkIfColumnTitleIsDisplayed()
             })
+            it('Check filter tomorrow', () => {
+                cy.selectDateFilter('tomorrow')
+            })
             it('Check order line element', () => {
                 cy.checkOrderLineElements()
             })

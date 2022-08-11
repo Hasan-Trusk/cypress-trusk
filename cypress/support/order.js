@@ -1,7 +1,9 @@
+/* eslint-disable cypress/no-force */
 import { DateTime } from 'luxon'
 
 const myOrdersButtonXpath = '(//div[@data-baseweb=\'flex-grid\']//div[@data-baseweb=\'flex-grid-item\'])[2]//button'
 const orderLineXpath = '//div[@data-baseweb=\'table-custom\']//div[@role=\'rowgroup\']//div[@role=\'row\']'
+const dateFilterRadioButtonXpath = '//div[@data-baseweb=\'form-control-container\']//div[@data-baseweb=\'block\']//div[@role= \'radiogroup\']//input'
 // const OrderNumberOnDetailPageOfOrderXpath = '//h2[contains(text(),\'Commande\')]'
 
 Cypress.Commands.add('checkIfColumnTitleIsDisplayed', () => {
@@ -33,6 +35,15 @@ Cypress.Commands.add('clickOnOrderButtonFromCard', () => {
     cy.url().then((url) => {
         expect(url).to.equal(`${Cypress.env('truskBusinessBaseUrl')}/fr/orders`)
     })
+})
+
+Cypress.Commands.add('selectDateFilter', (dateFilter) => {
+    const dateFilterData = ['today', 'tomorrow', 'week']
+    if (dateFilterData.includes(dateFilter)) {
+        cy.xpath(dateFilterRadioButtonXpath).check(dateFilter, { force: true }).should('have.value', dateFilter)
+    } else {
+        throw new Error('You can put only three string values : \'today\' OR \'tomorrow\' OR \'week\'')
+    }
 })
 
 Cypress.Commands.add('checkOrderLineElements', () => {
