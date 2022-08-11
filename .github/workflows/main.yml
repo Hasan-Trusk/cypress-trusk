@@ -26,6 +26,7 @@ jobs:
         uses: cypress-io/github-action@v4
         with:
           # spec: cypress/integration/truskBusiness.spec.js
+          browser: chrome
           record: true
           #parallel: true
           #group: "Actions example"

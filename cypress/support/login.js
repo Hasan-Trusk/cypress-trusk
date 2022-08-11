@@ -22,6 +22,9 @@ Cypress.Commands.add('login', () => {
 
 Cypress.Commands.add('openTruskBusinessLoginPage', () => {
     cy.visit(`${Cypress.env('truskBusinessBaseUrl')}/login`)
+    cy.reload()
+    cy.reload()
+    cy.reload()
     cy.get('[data-cy=email-input]', { timeout: 30000 }).should('be.visible')
 })
 
